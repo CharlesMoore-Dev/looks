@@ -18,4 +18,13 @@ Retrace the wallpaper (needs `pip install pillow numpy opencv-python-headless`):
 
     python scripts/trace_wallpaper.py source/osaka-jade-wallpaper.jpg --crop-top 56 --width 900 --colors 20 --epsilon 1.0 --min-area 5 --keep-bright 4 --sharpen 0.3
 
-The wallpaper art belongs to its maker: keep this mod private, don't publish it.
+## Credits
+
+The colours and wallpapers come from these themes; the backdrops are redrawn from their wallpapers.
+
+- **Osaka Jade** and **Vantablack**: colours and wallpapers from [Omarchy](https://github.com/omacom/omarchy)
+  (`themes/osaka-jade`, `themes/vantablack`).
+- **RetroPC**: colours and the `amber_tube.jpg` backdrop from
+  [rondilley/omarchy-retropc-theme](https://github.com/rondilley/omarchy-retropc-theme).
+- **Tokyo Night**: palette from [Tokyo Night](https://github.com/enkia/tokyo-night-vscode-theme) by enkia, and
+  Tokyo Night Day from [folke/tokyonight.nvim](https://github.com/folke/tokyonight.nvim). The skyline is original.
