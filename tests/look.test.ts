@@ -1,6 +1,7 @@
 import { expect, test } from 'claude-code/testing'
 
 import { problems as tokyo, theme as tokyoTheme } from '../hooks/look.js'
+import { citrix } from '../hooks/citrix.js'
 import { checkColors } from '../hooks/make-colors.js'
 import { osaka } from '../hooks/osaka.js'
 import { retropc } from '../hooks/retropc.js'
@@ -39,4 +40,13 @@ test('Desktop paints the Vantablack look', async () => {
 
   expect(blocking(vantablack.problems)).toEqual([])
   expect(blocking(checkColors(vantablack.theme))).toEqual([])
+})
+
+test('Desktop paints the Citrix look', async () => {
+  for (const line of citrix.problems.filter(l => /text-(primary|secondary|muted)|Desktop won/.test(l))) {
+    console.log(line)
+  }
+
+  expect(blocking(citrix.problems)).toEqual([])
+  expect(blocking(checkColors(citrix.theme))).toEqual([])
 })

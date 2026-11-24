@@ -1,6 +1,8 @@
 import type { EngineInterface, Register, ThemeSetArgs } from 'claude-code'
 
 import { LOOK as TOKYO_LOOK, problems as tokyoProblems, SCENE_NAME as TOKYO_SCENE } from './look.js'
+import { CITRIX_LOOK, CITRIX_SCENE, citrix } from './citrix.js'
+import { CITRIX_SCENE_SVG } from './citrix-scene.js'
 import { OSAKA_LOOK, OSAKA_SCENE, osaka } from './osaka.js'
 import { OSAKA_SCENE_SVG } from './osaka-scene.js'
 import { RETROPC_LOOK, RETROPC_SCENE, retropc } from './retropc.js'
@@ -12,6 +14,13 @@ import { VANTABLACK_SCENE_SVG } from './vantablack-scene.js'
 type Entry = { look: ThemeSetArgs; scene: string; svg: string; alt: string; problems: string[] }
 
 const LOOKS: Record<string, Entry> = {
+  citrix: {
+    look: CITRIX_LOOK,
+    scene: CITRIX_SCENE,
+    svg: CITRIX_SCENE_SVG,
+    alt: 'The Citrix dot-over-X mark glowing in brand purple over a deep purple field',
+    problems: citrix.problems,
+  },
   'osaka-jade': {
     look: OSAKA_LOOK,
     scene: OSAKA_SCENE,

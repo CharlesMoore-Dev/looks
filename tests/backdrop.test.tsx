@@ -1,7 +1,7 @@
 import { expect, test } from 'claude-code/testing'
 
 // Mounting runs the engine's backdrop check on each scene: an unsafe Svg throws.
-for (const scene of ['osaka-jade-dusk', 'tokyo-skyline', 'retropc-amber-tube', 'vantablack-dot-hands']) {
+for (const scene of ['osaka-jade-dusk', 'tokyo-skyline', 'retropc-amber-tube', 'vantablack-dot-hands', 'citrix-mark']) {
   test(`the ${scene} scene draws as the backdrop on desktop and mobile`, async ($, on) => {
     // Nothing beneath the mod draws a backdrop in the test host.
     on('ui.render', () => ({ value: null }))
